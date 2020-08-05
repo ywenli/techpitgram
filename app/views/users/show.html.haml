@@ -5,8 +5,9 @@
     .col-md-8
       .row
         %h1= @user.name
-        = link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn"
-        %button.setting{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}
+        - if @user == current_user
+          = link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn"
+          %button.setting{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}
         #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
           .modal-dialog{:role => "document"}
             .modal-content
