@@ -11,6 +11,9 @@
               = image_tag avatar_url(@post.user), class: "post-profile-icon"
             = link_to user_path(@post.user), class: "black-color no-text-decoration post-user-name", title: @post.user.name do
               %strong= @post.user.name
+            - if @post.user_id == current_user.id
+              = link_to post_path(@post), method: :delete, class: "ml-auto mx-0 my-auto" do
+                .delete-post-icon
           .m-2
             %strong
               = @post.caption
