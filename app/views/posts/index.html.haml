@@ -29,7 +29,7 @@
             %span= post.caption
             = link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "post-time no-text-decoration"
             %div{:id => "comment-post-#{post.id.to_s}"}
-              = = render 'comment_list', { post: post }
+              = render 'comment_list', { post: post }
             = link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "light-color post-time no-text-decoration"
             %hr/
             %div{:id => "comment-form-post-#{post.id.to_s}"}
