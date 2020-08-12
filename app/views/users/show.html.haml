@@ -4,7 +4,7 @@
       = image_tag avatar_url(@user), class: "round-img"
     .col-md-8
       .row
-        %h1= @user.name
+        %h1= @user.username
         - if @user == current_user
           = link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn"
           %button.setting{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}
@@ -18,7 +18,6 @@
               .list-group.text-center
                 = link_to "サインアウト", destroy_user_session_path, method: :delete, class: "list-group-item list-group-item-action"
                 = link_to "キャンセル", "#", class: "list-group-item list-group-item-action", "data-dismiss": "modal"
-      - if @user == current_user
         .row
           %p
-            = @user.email
+            = @user.name
