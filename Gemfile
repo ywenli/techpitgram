@@ -63,7 +63,7 @@ gem "haml-rails", "~> 2.0"
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'devise'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem "mini_magick"
 gem 'mysql2', '>= 0.4.4', '< 0.6.0', groups: %w(test development), require: false
 gem 'pg', '~> 0.19.0', group: :production, require: false
